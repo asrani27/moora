@@ -13,6 +13,7 @@ use App\Http\Controllers\UjianController;
 use App\Http\Controllers\WaktuController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MooraController;
 
 Route::get('/testapi', [HomeController::class, 'testapi']);
@@ -73,6 +74,8 @@ Route::post('/daftar', [LoginController::class, 'simpanDaftar']);
 Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::prefix('superadmin')->group(function () {
         Route::get('/moora', [MooraController::class, 'index']);
+        Route::get('/laporan', [LaporanController::class, 'index']);
+        Route::get('/laporan/hasil', [LaporanController::class, 'hasil']);
         Route::get('/hasil', [HasilController::class, 'index']);
         Route::get('/bobot', [BobotController::class, 'index']);
         Route::get('/bobot/{id_jurusan}/nilai', [BobotController::class, 'nilai']);

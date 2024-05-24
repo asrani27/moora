@@ -72,6 +72,14 @@
         </a>
     </li>
     <li class="nav-item">
+        <a href="/superadmin/laporan" class="nav-link {{ Request::is('superadmin/laporan*') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-file"></i>
+            <p>
+            Laporan Hasil Quiz
+            </p>
+        </a>
+    </li>
+    <li class="nav-item">
         <a href="/superadmin/waktu" class="nav-link {{ Request::is('superadmin/waktu*') ? 'active' : '' }}">
             <i class="nav-icon fas fa-clock"></i>
             <p>

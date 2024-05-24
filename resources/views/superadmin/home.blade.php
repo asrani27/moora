@@ -106,7 +106,7 @@
             <thead>
               <tr style="font-size:11px; font-family:Arial, Helvetica, sans-serif" class="bg-gradient-primary">
                 <th class="text-center">#</th>
-                <th>NIK</th>
+                <th>NIS</th>
                 <th class="text-center">Nama</th>
                 <th class="text-center">Telp</th>
                 <th class="text-center">Jumlah Soal</th>

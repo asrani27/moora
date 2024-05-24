@@ -34,7 +34,7 @@ class PesertaController extends Controller
 
         if ($validator->fails()) {
             $request->flash();
-            toastr()->error('NIK sudah ada');
+            toastr()->error('NIS sudah ada');
             return back();
         }
 
@@ -78,6 +78,7 @@ class PesertaController extends Controller
 
     public function destroy($id)
     {
+        Peserta::find($id)->user->delete();
         Peserta::find($id)->delete();
         toastr()->success('Sukses Di Hapus');
         return back();
@@ -91,24 +92,24 @@ class PesertaController extends Controller
         $n = new User;
         $n->name = $peserta->nama;
         $n->username = $peserta->nik;
-        $n->password = bcrypt($peserta->tgl);
+        $n->password = bcrypt('smk2');
         $n->save();
 
         $n->roles()->attach($role);
 
         $peserta->update(['user_id' => $n->id]);
 
-        toastr()->success('Akun sukses di buat, Password : ' . $peserta->telp);
+        toastr()->success('Akun sukses di buat, Password : smk2');
         return back();
     }
 
     public function pass($id)
     {
         $u = Peserta::find($id)->user;
-        $u->password = bcrypt('112233');
+        $u->password = bcrypt('smk2');
         $u->save();
 
-        toastr()->success('Password Baru : 112233');
+        toastr()->success('Password Baru : smk2');
         return back();
     }
 

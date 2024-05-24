@@ -20,10 +20,10 @@ EDIT
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">NIK</label>
+                                <label class="col-sm-2 col-form-label">NIS</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nik" required value="{{$data->nik}}"
-                                        minlength="16" maxlength="16">
+                                        >
                                 </div>
                             </div>
 

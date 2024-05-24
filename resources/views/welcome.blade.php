@@ -47,7 +47,7 @@
                     <div class="row">
                       <div class="card-body">
                         <div class="form-group row">
-                          <label for="inputEmail3" class="col-sm-4 col-form-label">Username (NIK)</label>
+                          <label for="inputEmail3" class="col-sm-4 col-form-label">Username</label>
                           <div class="col-sm-8">
                             <input type="text" class="form-control" id="inputEmail3" name="username"
                               placeholder="username" value="{{old('username')}}">

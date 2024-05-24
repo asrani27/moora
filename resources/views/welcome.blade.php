@@ -40,7 +40,7 @@
                   <div class="widget-user-header text-white"
                     style="background: url('/theme/bglogin.jpg') center center;">
                     <h3 class="widget-user-username text-center"><strong>SMK N 2 KANDANGAN</strong></h3>
-                    <h5 class="widget-user-desc text-center">DAFTAR</h5>
+                    <h5 class="widget-user-desc text-center">LOGIN</h5>
                   </div>
                   
                   <div class="card-footer">
@@ -64,7 +64,7 @@
                           <label for="inputPassword3" class="col-sm-4 col-form-label"></label>
                           <div class="col-sm-8">
                             <button type="submit" class="btn btn-primary">Login</button>
-                            <a href="/daftar" class="btn btn-primary">Daftar</a>
+                            {{-- <a href="/daftar" class="btn btn-primary">Daftar</a> --}}
                             {{-- <a href="#" class="btn btn-primary">Jadwal Pendaftaran Belum Dimulai</a> --}}
                           </div>
                         </div>

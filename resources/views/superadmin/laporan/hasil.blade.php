@@ -28,8 +28,45 @@
         </tr>
     </table>
     <br/>
-    <table border=1 cellspacing="0" cellpadding="3" width="100%">
-        
+    <table style="border: 1px solid black; padding:25px 25px;" cellspacing="0" cellpadding="3" width="70%" align="center">
+        <tr>
+            <td>NIK</td>
+            <td>:</td>
+            <td>{{$data->nik}}</td>
+        </tr>
+        <tr>
+            <td>Nama Lengkap</td>
+            <td>:</td>
+            <td>{{$data->nama}}</td>
+        </tr>
+        <tr>
+            <td><br/></td>
+            <td></td>
+            <td></td>
+        </tr>
+        @php
+            $sum = [];
+        @endphp
+        @foreach ($matpel as $item)
+        @php
+            array_push($sum, nilaiMatPel($item->id, $data->id))
+        @endphp
+        <tr>
+            <td>Nilai Quiz {{$item->nama}}</td>
+            <td>:</td>
+            <td>{{nilaiMatPel($item->id, $data->id)}}</td>
+        </tr>
+        @endforeach
+        <tr>
+            <td><br/></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nilai Rata-Rata</td>
+            <td>:</td>
+            <td>{{array_sum($sum)/5}}</td>
+        </tr>
     </table>
     <br/>
     <table width="100%">

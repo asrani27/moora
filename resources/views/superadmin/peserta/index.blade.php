@@ -35,7 +35,7 @@ ADMIN
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>NIS (username login)</th>
+                            <th>NIK (username login)</th>
                             <th>Nama</th>
                             <th>Telp</th>
                             <th>Tgl lahir</th>
